@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using FCamara.Product.Api.Models;
+using FCamara.Domain.Entity;
 
 namespace FCamara.Product.Api.Data
 {

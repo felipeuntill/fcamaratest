@@ -1,9 +1,10 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace FCamara.Domain.Entity
 {
-    public class ApplicationUser
-    {
+    public class ApplicationUser : IdentityUser
+    { 
 
     }
 }
