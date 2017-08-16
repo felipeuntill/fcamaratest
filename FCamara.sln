@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FCamara.Product", "FCamara.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FCamara.CrossCutting", "FCamara.CrossCutting", "{8B09F463-0564-4292-B559-F3CAEE17AAEA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FCamara.Product.WebApp", "FCamara.Product.WebApp\FCamara.Product.WebApp.csproj", "{F58C32E6-C9D3-441A-B063-EDAC915C8F83}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCamara.Product.Api", "FCamara.Product.Api\FCamara.Product.Api.csproj", "{C6A33A43-EE41-457C-A8AB-244460EF513A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCamara.Product.WebApp", "FCamara.Product.WebApp\FCamara.Product.WebApp.csproj", "{177359EA-6BAE-4489-9647-787CB7558841}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,20 +17,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F58C32E6-C9D3-441A-B063-EDAC915C8F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F58C32E6-C9D3-441A-B063-EDAC915C8F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F58C32E6-C9D3-441A-B063-EDAC915C8F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F58C32E6-C9D3-441A-B063-EDAC915C8F83}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C6A33A43-EE41-457C-A8AB-244460EF513A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C6A33A43-EE41-457C-A8AB-244460EF513A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6A33A43-EE41-457C-A8AB-244460EF513A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6A33A43-EE41-457C-A8AB-244460EF513A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{177359EA-6BAE-4489-9647-787CB7558841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{177359EA-6BAE-4489-9647-787CB7558841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{177359EA-6BAE-4489-9647-787CB7558841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{177359EA-6BAE-4489-9647-787CB7558841}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F58C32E6-C9D3-441A-B063-EDAC915C8F83} = {BE2DFD61-661C-4BC6-9F90-DAB37E46B0D9}
 		{C6A33A43-EE41-457C-A8AB-244460EF513A} = {BE2DFD61-661C-4BC6-9F90-DAB37E46B0D9}
+		{177359EA-6BAE-4489-9647-787CB7558841} = {BE2DFD61-661C-4BC6-9F90-DAB37E46B0D9}
 	EndGlobalSection
 EndGlobal
