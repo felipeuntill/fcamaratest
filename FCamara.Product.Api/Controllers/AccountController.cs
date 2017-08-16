@@ -83,6 +83,9 @@ namespace FCamara.Product.Api.Controllers
                 Success = false
             };
 
+            if (model.ConfirmPassword != model.Password)
+                response.Message = "A senha e confirmação da senha devem ser iguais";
+
             if (!ModelState.IsValid) return response;
 
             var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
