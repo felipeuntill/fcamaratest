@@ -1,0 +1,10 @@
+﻿/*#eb7b27*/
+.navbar {
+    background: #eb7b27;
+}
+.navbar .navbar-brand img {
+    max-width: 80px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
