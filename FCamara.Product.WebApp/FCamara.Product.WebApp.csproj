@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.0</TargetFramework>
@@ -7,6 +7,13 @@
   <PropertyGroup>
     <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\img\banner2.svg" />
+    <Content Include="wwwroot\img\banner3.svg" />
+    <Content Include="wwwroot\img\banner4.svg" />
+    <Content Include="wwwroot\js\app.js" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.0.5" />
@@ -17,6 +24,12 @@
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\js\modules\login\" />
+    <Folder Include="wwwroot\js\modules\home\" />
+    <Folder Include="wwwroot\js\modules\register\" />
+    <Folder Include="wwwroot\js\services\" />
   </ItemGroup>
 
 </Project>
