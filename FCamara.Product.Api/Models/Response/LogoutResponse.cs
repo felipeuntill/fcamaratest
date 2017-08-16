@@ -5,9 +5,7 @@ using System.Threading.Tasks;
 
 namespace FCamara.Product.Api.Models.Response
 {
-    public class BaseResponse
+    public class LogoutResponse : BaseResponse
     {
-        public bool Success { get; set; }
-        public string Message { get; set; }
     }
 }

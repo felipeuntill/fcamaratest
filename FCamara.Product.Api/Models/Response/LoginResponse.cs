@@ -7,6 +7,5 @@ namespace FCamara.Product.Api.Models.Response
 {
     public class LoginResponse : BaseResponse
     {
-
     }
 }
