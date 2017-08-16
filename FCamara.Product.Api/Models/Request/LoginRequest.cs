@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace FCamara.Product.Api.Models.AccountViewModels
+namespace FCamara.Product.Api.Models.Request
 {
-    public class LoginViewModel
+    public class LoginRequest
     {
         [Required]
         [EmailAddress]
