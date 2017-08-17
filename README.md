@@ -7,4 +7,4 @@
 
 2-) Inicialize um website simples no diretório `FCamara.Product.WebApp`
 
-3-) Execure o commando `dotnet run` no diretório raiz do projeto
+3-) Execure o projeto `FCamara.Product.Api` utilizando o `iisexpress` na porta 1960, ex: http://localhost:1960/
