@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FCamara.Product", "FCamara.Product", "{BE2DFD61-661C-4BC6-9F90-DAB37E46B0D9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FCamara.CrossCutting", "FCamara.CrossCutting", "{8B09F463-0564-4292-B559-F3CAEE17AAEA}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FCamara.Product.Api", "FCamara.Product.Api\FCamara.Product.Api.csproj", "{C6A33A43-EE41-457C-A8AB-244460EF513A}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FCamara.Product.WebApp(1)", "FCamara.Product.WebApp\", "{6DB8F511-FE79-4E99-B282-43FC6A9A68FA}"
@@ -32,7 +30,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FCamara.Product.WebApp(1)",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FCamara.Domain", "FCamara.Domain", "{4D055428-05F3-4336-B2C7-A19C65E2133E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FCamara.Domain.Entity", "FCamara.Domain.Entity\FCamara.Domain.Entity.csproj", "{3EDBCC7E-CEC3-495F-BBBF-F1C3E7AAEB14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FCamara.Domain.Entity", "FCamara.Domain.Entity\FCamara.Domain.Entity.csproj", "{3EDBCC7E-CEC3-495F-BBBF-F1C3E7AAEB14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

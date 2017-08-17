@@ -87,6 +87,9 @@ namespace FCamara.Product.Api.Controllers
             if (model.PasswordConf != model.Password)
                 response.Message = "A senha e confirmação da senha devem ser iguais";
 
+            if (model.Password.Length < 8)
+                response.Message = "A senha precisa conter no minimo 8 caracteres";
+
             if (!ModelState.IsValid) return response;
 
             var user = new ApplicationUser { UserName = model.Username, Email = model.Username };
