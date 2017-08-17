@@ -45,14 +45,14 @@
         // Mantém o usuário logado depois de registrado.
         $rootScope.globals = $cookies.getObject('globals') || {};
 
-        if ($rootScope.globals.currentUser)
-            $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
+        if ($rootScope.globals.token)
+            $http.defaults.headers.common['Authorization'] = 'Bearer ' + $rootScope.globals.token;
 
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
 
             // Redireciona o usuário para o login se ele não estiver autenticado e não estiver nas páginas /login ou /register
             var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
-            var loggedIn = $rootScope.globals.currentUser;
+            var loggedIn = $rootScope.globals.token;
 
             if (restrictedPage && !loggedIn)
                 $location.path('/login');
