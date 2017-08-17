@@ -15,15 +15,14 @@
         initController();
 
         function initController() {
-            loadCurrentUser();
             loadAllUsers();
         }
 
-        function deleteUser(id) {
-            UserService.Delete(id)
-            .then(function () {
-                loadAllUsers();
-            });
+        function loadAllUsers() {
+            UserService.List()
+            .then(function (response) {
+                    vm.users = response;
+                });
         }
     }
 

@@ -15,6 +15,7 @@ using FCamara.Product.Api.Models.AccountViewModels;
 using FCamara.Product.Api.Models.Request;
 using FCamara.Product.Api.Models.Response;
 using FCamara.Product.Api.Services;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 namespace FCamara.Product.Api.Controllers
@@ -125,18 +126,12 @@ namespace FCamara.Product.Api.Controllers
         }
 
 
-        // POST: /Account/Users
+        // GET: /Account/Users
         [HttpGet]
-        public async Task<LogoutResponse> users()
+        [AllowAnonymous]
+        public async Task<List<ApplicationUser>> Users()
         {
-            await _signInManager.SignOutAsync();
-
-            return new LogoutResponse
-            {
-                Message = "O usuário foi desconectado do sistema",
-                Success = false
-            };
+           return await _userManager.Users.ToListAsync();
         }
-
     }
 }
