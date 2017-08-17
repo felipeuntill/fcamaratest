@@ -15,6 +15,7 @@ using FCamara.Product.Api.Models.AccountViewModels;
 using FCamara.Product.Api.Models.Request;
 using FCamara.Product.Api.Models.Response;
 using FCamara.Product.Api.Services;
+using Newtonsoft.Json;
 
 namespace FCamara.Product.Api.Controllers
 {
@@ -56,7 +57,7 @@ namespace FCamara.Product.Api.Controllers
 
             if (!ModelState.IsValid) return response;
 
-            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+            var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, lockoutOnFailure: false);
 
             if (result.Succeeded)
             {
@@ -83,12 +84,12 @@ namespace FCamara.Product.Api.Controllers
                 Success = false
             };
 
-            if (model.ConfirmPassword != model.Password)
+            if (model.PasswordConf != model.Password)
                 response.Message = "A senha e confirmação da senha devem ser iguais";
 
             if (!ModelState.IsValid) return response;
 
-            var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser { UserName = model.Username, Email = model.Username };
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (result.Succeeded)
@@ -160,7 +161,7 @@ namespace FCamara.Product.Api.Controllers
                 // Send an email with this link
                 //var code = await _userManager.GeneratePasswordResetTokenAsync(user);
                 //var callbackUrl = Url.Action(nameof(ResetPassword), "Account", new { userId = user.Id, code = code }, protocol: HttpContext.Request.Scheme);
-                //await _emailSender.SendEmailAsync(model.Email, "Reset Password",
+                //await _emailSender.SendEmailAsync(model.Username, "Reset Password",
                 //   $"Please reset your password by clicking here: <a href='{callbackUrl}'>link</a>");
                 //return View("ForgotPasswordConfirmation");
             }
@@ -264,7 +265,7 @@ namespace FCamara.Product.Api.Controllers
             }
 
             var message = "Your security code is: " + code;
-            if (model.SelectedProvider == "Email")
+            if (model.SelectedProvider == "Username")
             {
                 await _emailSender.SendEmailAsync(await _userManager.GetEmailAsync(user), "Security Code", message);
             }

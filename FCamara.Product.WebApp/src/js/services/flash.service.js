@@ -6,6 +6,7 @@
         .factory('FlashService', FlashService);
 
     FlashService.$inject = ['$rootScope'];
+
     function FlashService($rootScope) {
         var service = {};
 

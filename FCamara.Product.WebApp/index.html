@@ -38,7 +38,7 @@
 
     <div id="appContainer">
         <div class="container">
-            <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+            <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message">{{flash.message}}</div>
             <div ng-view></div>
         </div>
     </div>

@@ -11,6 +11,7 @@
     function AuthenticationService($http, $cookies, $rootScope, $timeout, UserService) {
 
         var service = {};
+        var serviceHttpPath = "http://localhost:1960";
 
         service.Login = Login;
         service.SetCredentials = SetCredentials;
@@ -20,28 +21,10 @@
 
         function Login(username, password, callback) {
 
-            /* Dummy authentication for testing, uses $timeout to simulate api call
-             ----------------------------------------------*/
-            $timeout(function () {
-                var response;
-                UserService.GetByUsername(username)
-                    .then(function (user) {
-                        if (user !== null && user.password === password) {
-                            response = { success: true };
-                        } else {
-                            response = { success: false, message: 'Username or password is incorrect' };
-                        }
-                        callback(response);
-                    });
-            }, 1000);
-
-            /* Use this for real authentication
-             ----------------------------------------------*/
-            //$http.post('/api/authenticate', { username: username, password: password })
-            //    .success(function (response) {
-            //        callback(response);
-            //    });
-
+            $http.post(serviceHttpPath + '/Account/Login', { username: username, password: password })
+                .then(function (response) {
+                    callback(response);
+                });
         }
 
         function SetCredentials(username, password) {

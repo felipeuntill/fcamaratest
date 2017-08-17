@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace FCamara.Product.Api.Services
 {
-    // This class is used by the application to send Email and SMS
+    // This class is used by the application to send Username and SMS
     // when you turn on two-factor authentication in ASP.NET Identity.
     // For more details see this link https://go.microsoft.com/fwlink/?LinkID=532713
     public class AuthMessageSender : IEmailSender, ISmsSender
